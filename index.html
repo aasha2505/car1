@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        background-color:rgb(68, 187, 235);
+        height: 500px;
+        width: 100%;
+        display: block;
+
+    }
+    ul{
+        position: absolute;
+        right:5%;
+        top: 20px;
+        margin-top: 0px;
+        }
+        ul li{
+            margin-right: 40px;
+            list-style-type:none;
+            display: inline-block;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+        }
+.image{
+    width:100px ;
+    display: block;
+    position: relative;
+    position: absolute;
+    top: 40px;
+   list-style-type: none;
+   
+}
+.image img:hover{
+    transform: translateX(30px);
+}
+.circle{
+    position: relative;
+    position: absolute;
+    top:0px;
+    height:650px;
+    width: 600px;
+    background-color:gray;
+    clip-path: circle(600px at left);
+    z-index: -1;
+}
+.big-img{
+    height: 200px;
+    width: 200px;
+    margin-left: 370px;
+    margin-top: 150px;
+
+}
+.content{
+    position: absolute;
+    max-width: 50%;
+    right: 5%;
+    top: 20%;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content h1{
+    color:black ;
+}
+
+
+
+</style>
+<body>
+        <div class="container-fluid">
+            
+                    <ul class="navbar-nav" type="none">
+                        <li><a href="#Home" class="nav-link">Home</a></li>
+                        <li ><a href="#About" class="nav-link">Service</a></li>
+                        <li ><a href="#Brand" class="nav-link">Contact</a></li>
+                        <li><a href="#Offer" class="nav-link">About Us </a></li>
+                    </ul>
+                    <div class="image">
+                       <li> <img src="bmw.png" width="200px" height="200px" onClick="big('bmw.png'); circle('white'); background('purple');text('BMW 2 series gran coupe -$49.00lakh '); "></li> 
+                       <li> <img src="audi.png" width="200px" height="200px" onClick="big('audi.png'); circle('grey'); background('pink');text('AUDI RS5 - RS 1.13crore');"></li>
+                       <li> <img src="honda1.png" width="200px" height="200px" onClick="big('honda1.png'); circle('pink'); background('skyblue');text('HONDA CAR - RS 12 lakh');"></li> 
+                       </div>
+                       <div class="circle">
+                    </div>
+                    <div class="big-img">
+                        <img src="audi.png" alt="pic" class="big" width="650px">
+                    </div>
+                    <div class="content">
+                       
+                        <h1>Quality never goes out of style</h1>  
+                         <p><b>The Power of Dreams</b></p>
+                        <h4 id="textcontent"> We uncover some of the most iconic taglines in the history of motoring <br>– but can you guess the brand?</h4>
+                        
+
+                    </div>
+         </div>
+ 
+    
+    <script>
+        function big(img){
+            document.querySelector(".big").src=img;
+        }
+        function circle(color){
+            const circle=document.querySelector('.circle')
+            circle.style.background=color;
+        }
+        function background(background){
+            const circle=document.querySelector('body')
+             circle.style.background=background;
+        }
+        function text(newtext){
+            document.getElementById('textcontent').textContent=newtext;
+        }
+    
+
+
+    </script>
+</body>
+</html>
